@@ -9,15 +9,15 @@ module.exports = {
 		react: {
 			version: 'detect',
 		},
-		"import/resolver": {
+		'import/resolver': {
 			typescript: {
-				project: "tsconfig.json",
-			}
-		}
+				project: 'tsconfig.json',
+			},
+		},
 	},
 	extends: [
 		'plugin:@typescript-eslint/recommended',
-		'plugin:prettier/recommended',
+		// 'plugin:prettier/recommended',
 		'prettier',
 		'plugin:react/recommended',
 		'plugin:react-hooks/recommended',
@@ -39,5 +39,6 @@ module.exports = {
 		'react-hooks/exhaustive-deps': 'off',
 		'import/no-named-as-default': 'off',
 		'@typescript-eslint/no-empty-function': 'off',
+		'linebreak-style': 'off',
 	},
 };
