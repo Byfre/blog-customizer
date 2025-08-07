@@ -34,7 +34,7 @@ export const ArticleParamsForm = (props: ArticleParamsFormProps) => {
 		setIsFormOpen(false);
 	};
 	const [isFormOpen, setIsFormOpen] = useState(false);
-	useClickOutside(asideRef, closeForm);
+	useClickOutside(asideRef, closeForm, isFormOpen);
 
 	const [fontFamily, setFontFamily] = useState(fontFamilyOptions[0]);
 	const [fontSize, setFontSize] = useState(fontSizeOptions[0]);

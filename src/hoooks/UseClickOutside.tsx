@@ -2,9 +2,11 @@ import { useEffect } from 'react';
 
 export const useClickOutside = (
 	ref: React.RefObject<HTMLElement>,
-	callback: () => void
+	callback: () => void,
+	isFormOpen: boolean
 ) => {
 	useEffect(() => {
+		if (!isFormOpen) return;
 		const handleClickOutside = (event: MouseEvent) => {
 			if (ref.current && !ref.current.contains(event.target as Node)) {
 				callback();
@@ -15,5 +17,5 @@ export const useClickOutside = (
 		return () => {
 			document.removeEventListener('mousedown', handleClickOutside);
 		};
-	}, [ref, callback]);
+	}, [ref, callback, isFormOpen]);
 };
